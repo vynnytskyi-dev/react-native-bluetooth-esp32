@@ -1,50 +1,133 @@
-# Welcome to your Expo app 👋
+# React Native Bluetooth ESP32 Step Counter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A complete step counting system consisting of an ESP32 device with MPU6050 accelerometer and a React Native mobile application with native Bluetooth Low Energy (BLE) integration.
 
-## Get started
+## 📋 Project Documentation
 
-1. Install dependencies
+For detailed technical specifications, architecture overview, and implementation details, see:
+**[PROJECT_SPECIFICATION.md](./PROJECT_SPECIFICATION.md)**
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- Expo CLI
+- Arduino IDE with ESP32 support
+- XIAO ESP32-C3 board
+- MPU6050 accelerometer sensor
+
+### Hardware Setup
+
+1. **Connect MPU6050 to ESP32:**
+
+   - VCC → 3.3V
+   - GND → GND
+   - SDA → GPIO6
+   - SCL → GPIO7
+
+2. **Connect Reset Button:**
+
+   - One terminal → GPIO2
+   - Other terminal → GND
+
+3. **Upload Arduino Code:**
+   ```bash
+   # Open arduino/step.ino in Arduino IDE
+   # Install required libraries: BLEDevice, Wire
+   # Upload to XIAO ESP32-C3
+   ```
+
+### Mobile Application Setup
+
+1. **Install Dependencies:**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. **Start Development Server:**
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. **Run on Device:**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   # iOS
+   npx expo run:ios
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   # Android
+   npx expo run:android
+   ```
 
-## Get a fresh project
+## 🏗️ Architecture
 
-When you're ready, run:
+- **ESP32 (Arduino):** Step detection using MPU6050 accelerometer
+- **React Native:** Cross-platform mobile application
+- **TurboModules:** High-performance native BLE integration
+- **CoreBluetooth:** iOS Bluetooth Low Energy framework
 
-```bash
-npm run reset-project
+## 📱 Features
+
+- ✅ Real-time step counting
+- ✅ Bluetooth Low Energy communication
+- ✅ Automatic device discovery and connection
+- ✅ Step counter reset functionality
+- ✅ Debug logging and error handling
+- ✅ Modern React Native architecture
+
+## 🔧 Configuration
+
+### ESP32 Settings
+
+- **BLE Service UUID:** `4fafc201-1fb5-459e-8fcc-c5c9c331914b`
+- **Characteristic UUID:** `beefcafe-36e1-4688-b7f5-00000000000b`
+- **Sampling Rate:** 50Hz
+- **Device Name:** "Step-Sense"
+
+### Mobile App Settings
+
+- **Bundle ID:** com.expo.reactnativebluetoothesp32
+- **Minimum iOS:** 13.0+
+- **Minimum Android:** API 21+
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+├── app/                    # Expo Router application
+├── native/                 # Native integration layer
+├── ios/modules/StepBle/    # iOS BLE implementation
+├── arduino/               # ESP32 Arduino code
+└── assets/                # Application resources
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Key Technologies
 
-## Learn more
+- **React Native 0.81.4** with New Architecture
+- **Expo SDK 54** with Expo Router
+- **TypeScript** for type safety
+- **TurboModules** for native performance
+- **CoreBluetooth** for iOS BLE
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📖 Learn More
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page)
+- [CoreBluetooth Framework](https://developer.apple.com/documentation/corebluetooth)
+- [ESP32 BLE Arduino](https://github.com/espressif/arduino-esp32)
 
-## Join the community
+## 🤝 Contributing
 
-Join our community of developers creating universal apps.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test on both iOS and Android
+5. Submit a pull request
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 License
+
+This project is licensed under the MIT License.
