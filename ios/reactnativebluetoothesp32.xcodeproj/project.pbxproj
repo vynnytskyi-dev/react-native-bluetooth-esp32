@@ -11,6 +11,8 @@
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		4C047E8989664F5BF0095E60 /* libPods-reactnativebluetoothesp32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5700189450973C8CE8169C7 /* libPods-reactnativebluetoothesp32.a */; };
 		578FDCA3A4B3BFDE1F7EA201 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCD081FB3F57DC8A6BF1489 /* ExpoModulesProvider.swift */; };
+		789E4F722EA6896C00122AB3 /* StepBleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E4F712EA6896C00122AB3 /* StepBleManager.swift */; };
+		789E4F742EA6897D00122AB3 /* StepBleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 789E4F732EA6897D00122AB3 /* StepBleManager.m */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		C201EDEAF616DC7C7E3B7240 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 706091F581CAB5F5A7430F80 /* PrivacyInfo.xcprivacy */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
@@ -21,7 +23,9 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reactnativebluetoothesp32/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactnativebluetoothesp32/Info.plist; sourceTree = "<group>"; };
 		6B741A523E10BDB46C7C8932 /* Pods-reactnativebluetoothesp32.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactnativebluetoothesp32.debug.xcconfig"; path = "Target Support Files/Pods-reactnativebluetoothesp32/Pods-reactnativebluetoothesp32.debug.xcconfig"; sourceTree = "<group>"; };
-		706091F581CAB5F5A7430F80 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = reactnativebluetoothesp32/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		706091F581CAB5F5A7430F80 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = reactnativebluetoothesp32/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		789E4F712EA6896C00122AB3 /* StepBleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepBleManager.swift; path = modules/StepBle/StepBleManager.swift; sourceTree = "<group>"; };
+		789E4F732EA6897D00122AB3 /* StepBleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StepBleManager.m; path = modules/StepBle/StepBleManager.m; sourceTree = "<group>"; };
 		8FCD081FB3F57DC8A6BF1489 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reactnativebluetoothesp32/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		A5700189450973C8CE8169C7 /* libPods-reactnativebluetoothesp32.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactnativebluetoothesp32.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = reactnativebluetoothesp32/SplashScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				789E4F732EA6897D00122AB3 /* StepBleManager.m */,
+				789E4F712EA6896C00122AB3 /* StepBleManager.swift */,
 				13B07FAE1A68108700A75B9A /* reactnativebluetoothesp32 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -111,7 +117,6 @@
 				6B741A523E10BDB46C7C8932 /* Pods-reactnativebluetoothesp32.debug.xcconfig */,
 				BE79C7612F61E84F8A80BC29 /* Pods-reactnativebluetoothesp32.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -167,6 +172,8 @@
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1250;
+						DevelopmentTeam = "HHQJ2D53GM";
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -325,6 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789E4F722EA6896C00122AB3 /* StepBleManager.swift in Sources */,
+				789E4F742EA6897D00122AB3 /* StepBleManager.m in Sources */,
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
 				578FDCA3A4B3BFDE1F7EA201 /* ExpoModulesProvider.swift in Sources */,
 			);
@@ -360,12 +369,15 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.reactnativebluetoothesp32;
-				PRODUCT_NAME = reactnativebluetoothesp32;
+				PRODUCT_NAME = "reactnativebluetoothesp32";
 				SWIFT_OBJC_BRIDGING_HEADER = "reactnativebluetoothesp32/reactnativebluetoothesp32-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
+				DEVELOPMENT_TEAM = HHQJ2D53GM;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Debug;
 		};
@@ -391,11 +403,14 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.reactnativebluetoothesp32;
-				PRODUCT_NAME = reactnativebluetoothesp32;
+				PRODUCT_NAME = "reactnativebluetoothesp32";
 				SWIFT_OBJC_BRIDGING_HEADER = "reactnativebluetoothesp32/reactnativebluetoothesp32-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
+				DEVELOPMENT_TEAM = HHQJ2D53GM;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Release;
 		};

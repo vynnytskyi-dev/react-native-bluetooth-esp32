@@ -45,6 +45,10 @@
       <key>NSAllowsLocalNetworking</key>
       <true/>
     </dict>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>App uses Bluetooth to read step count from your sensor.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Bluetooth is required to connect to your step sensor.</string>
     <key>NSUserActivityTypes</key>
     <array>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>

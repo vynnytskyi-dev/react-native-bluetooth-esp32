@@ -10,7 +10,12 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.reactnativebluetoothesp32"
+      "bundleIdentifier": "com.anonymous.reactnativebluetoothesp32",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "App uses Bluetooth to read step count from your sensor.",
+        "NSBluetoothPeripheralUsageDescription": "Bluetooth is required to connect to your step sensor."
+      },
+      "appleTeamId": "HHQJ2D53GM"
     },
     "android": {
       "adaptiveIcon": {
