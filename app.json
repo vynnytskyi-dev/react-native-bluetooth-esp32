@@ -10,7 +10,12 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.reactnativebluetoothesp32"
+      "bundleIdentifier": "com.expo.reactnativebluetoothesp32",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "App uses Bluetooth to read step count from your ESP32 sensor.",
+        "NSBluetoothPeripheralUsageDescription": "Bluetooth is required to connect and receive step data from your ESP32 sensor."
+      },
+      "appleTeamId": "HHQJ2D53GM"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +26,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.anonymous.reactnativebluetoothesp32"
+      "package": "com.expo.reactnativebluetoothesp32"
     },
     "web": {
       "output": "static",
@@ -40,7 +45,8 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true,
