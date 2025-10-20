@@ -38,6 +38,11 @@ yarn-error.*
 
 app-example
 
-# generated native folders
-/ios
-/android
+# React Native Build Artifacts
+ios/Pods/
+ios/Podfile.lock
+ios/build/
+android/.gradle/
+android/app/build/
+android/build/
+android/*.keystore
